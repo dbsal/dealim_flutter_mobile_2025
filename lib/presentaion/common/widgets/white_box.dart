@@ -5,8 +5,11 @@ class WhiteBox extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final Widget child;
 
-  const WhiteBox({Key? key, this.padding, required this.child})
-    : super(key: key);
+  const WhiteBox({
+    Key? key,
+    this.padding,
+    required this.child,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,7 @@ class WhiteBox extends StatelessWidget {
       width: double.infinity,
       padding: padding,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 255, 255, 255),
+        color: Colors.white,
         borderRadius: BorderRadius.circular(25),
       ),
       child: child,

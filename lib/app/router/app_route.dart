@@ -1,9 +1,5 @@
-enum AppRoute { start, main, result }
+enum AppRoute { start, main }
 
-extension AppRouteExtensionon on AppRoute {
-  String get topath => '/$name';
+extension AppRouteExtension on AppRoute {
+  String get toPath => '/$name';
 }
-
-// void main() {
-//   AppRoute.start.name;
-// }

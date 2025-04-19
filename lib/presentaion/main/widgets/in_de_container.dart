@@ -1,9 +1,7 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-
-import 'package:daelim_2025/main/widgets/circle_icon_button.dart';
-import 'package:daelim_2025/presentation/common/widgets/white_box.dart';
+import 'package:dealim_flutter_mobile_2025/presentaion/common/widgets/white_box.dart';
+import 'package:dealim_flutter_mobile_2025/presentaion/main/widgets/circle_icon_button.dart';
 
 class InDeContainer extends StatelessWidget {
   final String title;
@@ -12,12 +10,12 @@ class InDeContainer extends StatelessWidget {
   final VoidCallback onPlus;
 
   const InDeContainer({
-    Key? key,
+    super.key,
     required this.title,
     required this.value,
     required this.onMinus,
     required this.onPlus,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +23,8 @@ class InDeContainer extends StatelessWidget {
       padding: EdgeInsets.all(27),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          //타이틀
+        children: //타이틀
+            [
           Text(title, style: TextStyle(fontSize: 18)),
           //숫자
           Text(
@@ -37,6 +35,7 @@ class InDeContainer extends StatelessWidget {
               color: Color(0xFF6C63FF),
             ),
           ),
+          //Minus-Plus버튼튼
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 20,
@@ -46,7 +45,7 @@ class InDeContainer extends StatelessWidget {
             ],
           ),
         ],
-      ),
+      ), //padding엔 EdgeInsets.가 필요함함
     );
   }
 }

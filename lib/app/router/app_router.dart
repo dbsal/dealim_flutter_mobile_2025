@@ -1,30 +1,19 @@
-import 'package:daelim_2025/app/router/app_route.dart';
-import 'package:daelim_2025/main/mainScreen.dart';
-import 'package:daelim_2025/presentation/result/result_screen.dart';
-import 'package:daelim_2025/presentation/start/Startscreen.dart';
+import 'package:dealim_flutter_mobile_2025/app/router/app_route.dart';
+import 'package:dealim_flutter_mobile_2025/presentaion/main/main_screen.dart';
+import 'package:dealim_flutter_mobile_2025/presentaion/start/start_screen.dart';
 import 'package:go_router/go_router.dart';
 
+// GoRouter configuration
 final router = GoRouter(
-  initialLocation: AppRoute.start.topath,
+  initialLocation: AppRoute.start.toPath,
   routes: [
     GoRoute(
-      path: AppRoute.start.topath,
-      name: AppRoute.start.name,
-      builder: (context, state) => Startscreen(),
+      path: AppRoute.start.toPath,
+      builder: (context, state) => StartScreen(),
     ),
     GoRoute(
-      path: AppRoute.main.topath,
-      name: AppRoute.main.name,
+      path: AppRoute.main.toPath,
       builder: (context, state) => MainScreen(),
-    ),
-    GoRoute(
-      path: AppRoute.result.topath,
-      name: AppRoute.result.name,
-      builder: (context, state) {
-        final bmi = state.uri.queryParameters['bmi'];
-        //가져올 값
-        return ResultScreen(bmi: double.parse(bmi!));
-      },
     ),
   ],
 );

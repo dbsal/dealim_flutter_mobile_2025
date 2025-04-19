@@ -1,4 +1,4 @@
-import 'package:daelim_2025/presentation/common/widgets/white_box.dart';
+import 'package:dealim_flutter_mobile_2025/presentaion/common/widgets/white_box.dart';
 import 'package:flutter/material.dart';
 
 enum Gender { male, female }
@@ -29,10 +29,10 @@ class _GenderBoxState extends State<GenderBox> {
                 value: _gender == Gender.female,
                 onChanged: (value) {
                   widget.onChanged(_gender);
-                  //UI 변경하기
+                  // UI 변경하기
 
                   setState(() {
-                    //기본방법
+                    // 기본방법
                     // if (value) {
                     //   _gender = Gender.female;
                     // } else {

@@ -1,4 +1,4 @@
-import 'package:daelim_2025/presentation/my_app.dart';
+import 'package:dealim_flutter_mobile_2025/presentaion/my_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
